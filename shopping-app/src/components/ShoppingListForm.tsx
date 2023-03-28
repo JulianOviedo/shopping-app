@@ -21,7 +21,7 @@ export default function ShoppingListForm({ addItem }: ShoppingListFormProps): JS
         <form onSubmit={handleSubmit} className='list-form'>
             <input type='text' placeholder="Product Name" ref={productInputRef} required/>
             <input type='number' min={0} placeholder="Quantity" ref={qtyInputRef} required/>
-            <button>Submit</button>
+            <button>Add Item</button>
         </form>
     )
 } 
