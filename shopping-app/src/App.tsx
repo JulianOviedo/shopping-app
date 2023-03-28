@@ -14,10 +14,15 @@ function App() {
     setItems([...items, { id: getId(), product: product, qty: qty }])
   }
 
+  const deleteItem = (id : string) => {
+    setItems(prevItems =>{ return prevItems.filter(item => item.id !== id.toString())})
+  }
+
   return (
     <>
-      <ShoppingList items={items} />
+      <h1>Shopping List</h1>
       <ShoppingListForm addItem={addItem} />
+      <ShoppingList items={items} onDelete={deleteItem} />
     </>
   )
 }

@@ -7,6 +7,7 @@ interface ShoppingListFormProps {
 export default function ShoppingListForm({ addItem }: ShoppingListFormProps): JSX.Element {
     const productInputRef = useRef<HTMLInputElement>(null)
     const qtyInputRef = useRef<HTMLInputElement>(null)
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
         const newProduct = productInputRef.current!.value
@@ -17,9 +18,9 @@ export default function ShoppingListForm({ addItem }: ShoppingListFormProps): JS
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input type='text' placeholder="Product Name" ref={productInputRef} />
-            <input type='number' min={0} placeholder="Quantity" ref={qtyInputRef} />
+        <form onSubmit={handleSubmit} className='list-form'>
+            <input type='text' placeholder="Product Name" ref={productInputRef} required/>
+            <input type='number' min={0} placeholder="Quantity" ref={qtyInputRef} required/>
             <button>Submit</button>
         </form>
     )

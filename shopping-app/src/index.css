@@ -26,7 +26,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -66,4 +66,26 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 10px
+}
+
+.list-item-button {
+  background-color: rgb(224, 91, 91) !important;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 30px;
+}
+
+.list-form {
+  display: flex;
+  gap: 10px;
 }
